@@ -7,10 +7,7 @@ const Country = ({ countryPromise }) => {
     const newVisited = [...visitedCountries, data];
     setVisitedCountries(newVisited);
   };
-  // const [visitedFlag,setVisitedFlag] = useState([])
-  // const handleVisitedFlag = ()=>{
 
-  // }
   const countries = use(countryPromise);
   const countriesData = countries.countries;
   return (
@@ -18,7 +15,7 @@ const Country = ({ countryPromise }) => {
       <h1 className="text-center">
         Total Visited Countries: {visitedCountries.length}
       </h1>
-      <div className="border w-10/12 mx-auto p-5 mt-3">
+      <div className="border w-10/12 mx-auto p-5 mt-3 rounded-2xl bg-amber-200">
         <ol className="flex gap-5">
           <h1>Visited:</h1>
           {visitedCountries.map((country) => (
